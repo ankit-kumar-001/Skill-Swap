@@ -1,0 +1,22 @@
+INSERT INTO skills (name, category) VALUES
+  ('JavaScript', 'Programming'),
+  ('React', 'Programming'),
+  ('Node.js', 'Programming'),
+  ('Python', 'Programming'),
+  ('FastAPI', 'Programming'),
+  ('PostgreSQL', 'Database'),
+  ('Machine Learning', 'AI'),
+  ('Data Analysis', 'Data'),
+  ('UI Design', 'Design'),
+  ('Graphic Design', 'Design'),
+  ('Public Speaking', 'Communication'),
+  ('English', 'Language'),
+  ('Hindi', 'Language'),
+  ('Guitar', 'Music'),
+  ('Piano', 'Music'),
+  ('Photography', 'Creative'),
+  ('Video Editing', 'Creative'),
+  ('Digital Marketing', 'Business'),
+  ('Excel', 'Productivity'),
+  ('Project Management', 'Business')
+ON CONFLICT (name) DO UPDATE SET category = EXCLUDED.category;
